@@ -1,3 +1,4 @@
+#Practice/Learning Code from online Tutorial by FreeCodeCamp.com
 import tensorflow
 import matplotlib.pyplot as plt
 import numpy as np
@@ -131,3 +132,4 @@ if __name__=='__main__':
 
 	#Evaluation on test set
 	model.evaluate(x_test, y_test, batch_size=64)
+
