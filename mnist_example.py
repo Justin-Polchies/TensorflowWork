@@ -2,11 +2,12 @@
 import tensorflow
 import matplotlib.pyplot as plt
 import numpy as np
+
 from tensorflow.keras.layers import Conv2D, Input, Dense, MaxPool2D, BatchNormalization, GlobalAvgPool2D
 from tensorflow.python.keras import activations
 
-from Deep_learning_Model import functional_model, MyCustomModel
-from my_untils import display_some_examples
+from Deep_learning_Models import functional_model, MyCustomModel
+from my_untils import display_examples
 
 
 # tensorflow.keras.Sequential
