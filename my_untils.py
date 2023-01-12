@@ -56,7 +56,7 @@ def split_data(path_to_data, path_to_save_train, path_to_save_val, split_size=0.
 
 def order_test_set(path_to_images, path_to_csv):
 
-    testset = {}
+   
 
     try:
         with open(path_to_csv, 'r') as csvfile:
@@ -69,3 +69,14 @@ def order_test_set(path_to_images, path_to_csv):
                     continue
 
                 img_name = row[-1].replace('Test/','')
+                label = row[-2]
+
+                path_to_folder = os.path.join(path_to_images, label)
+
+                if not os.path.isdir(path_to_folder):
+                    os.makedirs(path_to_folder)
+                img_full_path = os.path.join(path_to_images, img_name)
+                shutil.move(img_full_path, path_to_folder)
+
+    except:
+        print('[INFO] : Error reading csv file')
