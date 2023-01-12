@@ -4,6 +4,7 @@ import os
 import glob
 from sklearn.model_selection import train_test_split
 import shutil
+import csv
 
 
 
@@ -57,3 +58,14 @@ def order_test_set(path_to_images, path_to_csv):
 
     testset = {}
 
+    try:
+        with open(path_to_csv, 'r') as csvfile:
+
+            reader = csv.reader(csvfile, delimiter=',')
+
+            for i, row in enumerate(reader):
+
+                if i == 0:
+                    continue
+
+                img_name = row[-1].replace('Test/','')
