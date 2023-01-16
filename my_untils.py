@@ -5,6 +5,8 @@ import glob
 from sklearn.model_selection import train_test_split
 import shutil
 import csv
+from tensorflow import keras
+from keras.preprocessing.image import Image
 
 
 
@@ -80,3 +82,7 @@ def order_test_set(path_to_images, path_to_csv):
 
     except:
         print('[INFO] : Error reading csv file')
+
+def create_generators(batch_size, train_data_path, val_data_path, test_data_path):
+
+    preprocessor = 

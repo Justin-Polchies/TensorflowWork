@@ -1,6 +1,7 @@
 import tensorflow
-from tensorflow.keras.layers import Conv2D, Input, Dense, MaxPool2D, BatchNormalization, GlobalAvgPool2D, Flatten
-from tensorflow.keras import Model
+from tensorflow import keras
+from keras.layers import Conv2D, Input, Dense, MaxPool2D, BatchNormalization, GlobalAvgPool2D, Flatten
+from keras import Model
 
 # functional approach : function that returns a model
 def functional_model():
