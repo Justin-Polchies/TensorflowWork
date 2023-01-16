@@ -6,6 +6,8 @@ import shutil
 from my_untils import split_data, order_test_set
 
 
+from Deep_learning_Models import streetsigns_model
+
 
 if __name__ =="__main__":
 
